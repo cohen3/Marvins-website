@@ -1,18 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <script>
-        function myFunction(p1, p2) {
-            document.getElementById('btn').style.visibility = 'hidden';
-            alert('welcome to my website!!!!')
-            document.getElementById('txt').innerText = "Welcome!"
-        }
-    </script>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 <body>
+<div class="header">
+  <a href="#top" class="logo"><img src="assets/marvinlogo.JPG" height="85" width="85" id="logoimg"/></a>
+  <div class="header-right">
+    <a href="#about" class="active">About Me</a>
+    <a href="#photos" class="active">My Photos</a>
+    <a href="#playlist" class="active">My Playlist</a>
+    <a href="#like" class="active">Like</a>
+    <a href="#qrcoder" class="active">QR code</a>
+    <a href="#contact" class="active">Contact Me</a>
+  </div>
+</div>
 
-<h1>The best website!</h1>
-<h2>Only humans and Marvin can get in!</h2>
+<h3 style="text-align: center;"><br/><br/><br/><br/>Hey my name is Marvin and I am an android!</h3>
+<h3 style="text-align: center;"> this is page about Marvin, a fictional character from Detroid Become Human and created by Freya</h3>
+<h3 style="text-align: center;"> He is shy and afraid of people, harmless but very friendly</h3>
+<h3 style="text-align: center;"> All the information written here is based on Freya's story, although my writting skills arent great in general</h3>
+<h3 style="text-align: center;"> Enjoy!</h3>
+<br/><br/><br/><br/><br/><br/><br/>
+<section id="about" class="section">
+    <br/><br/><br/><br/><br/><br/><br/>
+<h2 class="titleAbout">About</h2>
+<div class="top"><div class="title">Marvin is an android of type MV800, the first android type ever made by CyberLife.
+    </div>
+  </div>
+</section>
 
-<button id="btn" type="button" onclick="myFunction()">I am not a robot! (Marvin is ok)</button>
-<p id="txt"></p>
+
+<section id="photos" class="section">
+<br/><br/><br/><br/><br/><br/><br/>
+<h2 class="titleAbout">Photos</h2>
+<table>
+  <tr>
+  <th>
+    <div class="photo"><img src="assets/mv1.png" height="400" width="400">Marvin</img></div>
+  </th>
+  <th>
+    <div class="photo"><img src="assets/mv2.png" height="400" width="400">Also Marvin</img></div>
+  </th>
+  <th>
+    <div class="photo"><img src="assets/mv3.png" height="400" width="400">Cute Marvin</img></div>
+  </th>
+  <th>
+      <div class="photo"><img src="assets/mv4.png" height="400" width="400">Cool Marvin</img></div>
+  </th>
+</tr>
+</table>
+</section>
+<section id="playlist" class="section">
+<br/><br/><br/><br/><br/><br/><br/>
+<h2 class="titleAbout">Play List</h2>
+<h2 style="text-align: center">The opening theme for Dragon Ball Z original</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6kE6h7dvg3w" style="display:block; margin: 0 auto;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<section id="like" class="section">
+<br/><br/><br/><br/><br/><br/><br/>
+<h3 class="titleAbout">Like My Page</h3>
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FDetroitBecomeHuman%2F&width=450&layout=standard&action=like&size=small&share=true&height=35&appId=174429694352" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+</section>
+<section id="qrcoder" class="section">
+<br/><br/><br/><br/><br/><br/><br/>
+<h3 class="titleAbout">QR Code</h3>
+<div id="bc">
+<div id="animation"></div>
+<img src="assets/qr.JPG" id="QR"></img>
+</div>
+<br/>
+</section>
+</br></br></br></br></br></br></br>
+
+<section id="contact" class="section">
+<br/><br/><br/><br/><br/><br/><br/>
+<h3 class="titleAbout">Contact Me</h3>
+<form action="mailto:cohen3@post.bgu.ac.il" method="post" enctype="text/plain">
+  Name:<br>
+  <input type="text" id="fname" name="name" placeholder="Whats your name?"><br>
+  E-mail:<br>
+  <input type="text" name="mail" placeholder="example@domain.dns"><br>
+  Comment:<br>
+  <input type="text" name="comment" size="50" placeholder="What would you like to tell me?"><br><br>
+  <input type="submit" value="Send">
+  <input type="reset" value="Reset">
+  </form>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</section>
+
+
+<script type="text/javascript">
+$(function(){
+  $("#nav a").click(function(e){
+    e.preventDefault();
+    $('html,body').scrollTo(this.hash,this.hash); 
+  });
+});
+</script>
+<script type="text/javascript">
+ $(document).scroll(function() {
+    $('#menu').toggle($(this).scrollTop()>1000)
+ });​
+ </script>
 </body>
 </html>
